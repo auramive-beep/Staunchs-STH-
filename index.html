@@ -1,112 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#090b12">
-  <meta name="description" content="Staunchs — gaming community. Meet the team and join our Discord.">
-  <title>Staunchs — Official Community</title>
-  <style>
-    :root { --bg:#090b12; --panel:#111521; --text:#f4f6fb; --muted:#9ca7bb; --accent:#a855f7; --accent2:#22d3ee; }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; color:var(--text); background:radial-gradient(ellipse at 50% -10%, #28204a 0%, var(--bg) 48%); font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
-    a { color:inherit; text-decoration:none; }
-    .wrap { width:min(1100px,92%); margin:auto; }
-    header { display:flex; align-items:center; justify-content:space-between; padding:24px 0; gap:18px; }
-    .brand { display:flex; align-items:center; gap:12px; font-weight:900; letter-spacing:2px; font-size:1.1rem; }
-    .logo { display:grid; place-items:center; width:42px; height:42px; border-radius:13px; background:linear-gradient(135deg,var(--accent),var(--accent2)); color:#090b12; font-weight:1000; font-size:1.3rem; box-shadow:0 0 30px #a855f744; }
-    nav { display:flex; gap:22px; color:var(--muted); font-size:.94rem; }
-    nav a:hover { color:white; }
-    .hero { min-height:68vh; display:grid; place-items:center; text-align:center; padding:65px 0 80px; }
-    .eyebrow { display:inline-flex; gap:8px; align-items:center; padding:8px 13px; border:1px solid #ffffff1a; border-radius:99px; background:#ffffff08; color:#d9c4ff; font-size:.83rem; letter-spacing:.5px; }
-    .dot { width:7px; height:7px; background:#4ade80; border-radius:50%; box-shadow:0 0 12px #4ade80; }
-    h1 { margin:22px 0 14px; font-size:clamp(3.3rem,10vw,7rem); line-height:.95; letter-spacing:-.07em; font-weight:1000; }
-    .gradient { background:linear-gradient(100deg,#fff 15%,#c084fc 52%,#67e8f9 90%); -webkit-background-clip:text; background-clip:text; color:transparent; }
-    .intro { max-width:630px; margin:0 auto; color:var(--muted); font-size:clamp(1rem,2vw,1.2rem); line-height:1.75; }
-    .actions { display:flex; justify-content:center; flex-wrap:wrap; gap:12px; margin-top:30px; }
-    .btn { display:inline-flex; align-items:center; justify-content:center; gap:10px; border-radius:12px; padding:14px 20px; font-weight:800; transition:transform .2s,filter .2s; }
-    .btn:hover { transform:translateY(-2px); filter:brightness(1.1); }
-    .primary { background:linear-gradient(100deg,var(--accent),#7c3aed); box-shadow:0 8px 28px #a855f733; }
-    .secondary { border:1px solid #ffffff22; background:#ffffff08; }
-    section { padding:42px 0 70px; }
-    .section-head { text-align:center; margin-bottom:28px; }
-    .section-head h2 { font-size:clamp(1.8rem,4vw,2.6rem); margin:0 0 10px; letter-spacing:-.04em; }
-    .section-head p { color:var(--muted); margin:0; }
-    .team { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
-    .card { padding:24px; border:1px solid #ffffff12; border-radius:20px; background:linear-gradient(145deg,#151a29dd,#0d1019ee); box-shadow:0 15px 45px #0002; }
-    .card h3 { margin:0 0 16px; font-size:1.05rem; display:flex; align-items:center; gap:10px; }
-    .icon { display:grid; place-items:center; width:34px; height:34px; border-radius:10px; background:#a855f71c; color:#d8b4fe; }
-    .people { display:flex; flex-wrap:wrap; gap:9px; }
-    .person { padding:9px 12px; border-radius:10px; border:1px solid #ffffff13; background:#ffffff06; color:#e7eaf2; font-weight:650; }
-    .owner { border-color:#a855f755; background:#a855f715; }
-    .founder { border-color:#22d3ee55; background:#22d3ee10; }
-    .join { text-align:center; border:1px solid #ffffff16; border-radius:24px; padding:40px 20px; background:radial-gradient(ellipse at top,#43216b66,transparent 65%),#111521; }
-    .join h2 { margin:0 0 12px; font-size:clamp(1.7rem,4vw,2.5rem); }
-    .join p { margin:0 auto 24px; max-width:560px; line-height:1.7; color:var(--muted); }
-    footer { border-top:1px solid #ffffff12; padding:24px 0 35px; color:#7f8ba1; font-size:.88rem; text-align:center; }
-    @media (max-width:650px) { header { align-items:flex-start; } nav { gap:12px; flex-wrap:wrap; justify-content:flex-end; font-size:.85rem; } .team { grid-template-columns:1fr; } .hero { min-height:60vh; padding-top:45px; } }
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <header>
-      <a class="brand" href="#home" aria-label="Staunchs home"><span class="logo">S</span><span>STAUNCHS</span></a>
-      <nav aria-label="Main navigation">
-        <a href="#team">Our Team</a>
-        <a href="#discord">Discord</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="hero" id="home">
-        <div>
-          <div class="eyebrow"><span class="dot"></span> OFFICIAL COMMUNITY</div>
-          <h1><span class="gradient">STAUNCHS</span></h1>
-          <p class="intro">More than a name. A community built around gaming, teamwork, and good moments. Meet the people behind Staunchs and come join us.</p>
-          <div class="actions">
-            <a class="btn primary" href="https://discord.gg/SEx8gtSVk" target="_blank" rel="noopener noreferrer">Join our Discord <span aria-hidden="true">↗</span></a>
-            <a class="btn secondary" href="#team">Meet the team ↓</a>
-          </div>
-        </div>
-      </section>
-
-      <section id="team">
-        <div class="section-head">
-          <h2>The people behind <span class="gradient">Staunchs</span></h2>
-          <p>Meet the team keeping the community moving.</p>
-        </div>
-        <div class="team">
-          <article class="card">
-            <h3><span class="icon">♛</span> Owner</h3>
-            <div class="people"><span class="person owner">K1ngHY</span></div>
-          </article>
-          <article class="card">
-            <h3><span class="icon">✦</span> Founder</h3>
-            <div class="people"><span class="person founder">A7bkya8be</span></div>
-          </article>
-          <article class="card" style="grid-column:1/-1">
-            <h3><span class="icon">⚙</span> Admins</h3>
-            <div class="people">
-              <span class="person">sssaad</span>
-              <span class="person">Loogings</span>
-              <span class="person">Obm</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="discord">
-        <div class="join">
-          <h2>Ready to join <span class="gradient">Staunchs</span>?</h2>
-          <p>Meet the community, connect with the team, and be part of what comes next.</p>
-          <a class="btn primary" href="https://discord.gg/SEx8gtSVk" target="_blank" rel="noopener noreferrer">Join the Discord server ↗</a>
-        </div>
-      </section>
-    </main>
-
-    <footer>© <span id="year">2026</span> Staunchs Community · Made for the community.</footer>
-  </div>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-</body>
-</html>
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090b12"><title>STAUNCHS — Team & Shop</title>
+<style>
+:root{--bg:#090b12;--panel:#121827;--muted:#a2aec2;--purple:#a855f7;--cyan:#22d3ee;--line:#ffffff18}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -10%,#39205b,transparent 50%),var(--bg);color:#f7f8ff;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{width:min(1050px,92%);margin:auto}a{color:inherit;text-decoration:none}
+header{display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:1px solid var(--line);gap:16px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:950;letter-spacing:2px}.logo{width:42px;height:42px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(135deg,var(--purple),var(--cyan));color:#080a12;font-size:23px}
+nav{display:flex;gap:20px;color:var(--muted);font-size:.92rem}
+.hero{text-align:center;padding:75px 0 45px}.pill{display:inline-block;padding:8px 13px;border:1px solid #a855f755;border-radius:99px;color:#e9d5ff;background:#a855f714;font-size:.78rem;font-weight:800;letter-spacing:1.5px}
+h1{font-size:clamp(2.8rem,8vw,5.5rem);line-height:1;margin:20px 0;letter-spacing:-.06em}.grad{background:linear-gradient(100deg,#fff,#c084fc 55%,#67e8f9);color:transparent;background-clip:text;-webkit-background-clip:text}
+.hero p{max-width:620px;margin:auto;color:var(--muted);line-height:1.8}.heading{text-align:center;margin:24px 0 28px}.heading h2{font-size:clamp(1.7rem,4vw,2.5rem);margin:0 0 8px}.heading p{color:var(--muted);margin:0}
+.team{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px;padding-bottom:55px}
+.card{position:relative;overflow:hidden;padding:24px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,#171d2d,#0e121d);transition:transform .2s,border-color .2s;min-height:250px}
+.card:hover{transform:translateY(-5px);border-color:#a855f777}.card:after{content:"";position:absolute;right:-65px;top:-85px;width:150px;height:150px;border-radius:50%;background:var(--glow);filter:blur(65px);opacity:.3;pointer-events:none}
+.avatar{width:64px;height:64px;border-radius:19px;display:grid;place-items:center;margin-bottom:20px;font-size:1.35rem;font-weight:950;background:linear-gradient(135deg,#7c3aed,#c084fc);border:1px solid #ffffff30}
+.founder .avatar{background:linear-gradient(135deg,#0891b2,#67e8f9);color:#06121a}.admin .avatar{background:linear-gradient(135deg,#29364e,#64748b)}
+.role{font-size:.72rem;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;color:#d8b4fe;margin-bottom:8px}.founder .role{color:#67e8f9}.admin .role{color:#b5c2d7}
+.card h3{margin:0 0 9px;font-size:1.35rem;overflow-wrap:anywhere}.desc{margin:0;color:var(--muted);font-size:.9rem;line-height:1.6}
+.tag{display:inline-flex;align-items:center;gap:7px;margin-top:19px;padding:7px 10px;border:1px solid var(--line);border-radius:9px;background:#ffffff06;font-size:.76rem;color:#d9deeb}.tag:before{content:"";width:6px;height:6px;border-radius:50%;background:#4ade80}
+.shop{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px;padding-bottom:58px}.product{position:relative;overflow:hidden;padding:24px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,#171d2d,#0e121d);min-height:255px}.product:hover{border-color:#22d3ee88;transform:translateY(-4px)}.product{transition:transform .2s,border-color .2s}.product-icon{height:72px;width:72px;border-radius:20px;display:grid;place-items:center;font-size:2.2rem;background:linear-gradient(135deg,#7c3aed55,#22d3ee33);border:1px solid #ffffff20;margin-bottom:18px}.sale{display:inline-block;background:#f97316;color:#fff;padding:5px 9px;border-radius:7px;font-size:.7rem;font-weight:900;letter-spacing:1px}.product h3{margin:13px 0 8px;font-size:1.2rem}.product p{color:var(--muted);font-size:.9rem;line-height:1.6;margin:0 0 15px}.price{font-size:1.45rem;font-weight:950;color:#67e8f9}.old-price{font-size:.9rem;color:#8792a7;text-decoration:line-through;margin-left:7px}.order{display:inline-block;margin-top:16px;padding:10px 13px;border-radius:10px;background:#ffffff0d;border:1px solid #ffffff20;font-weight:800;font-size:.85rem}.shop-note{text-align:center;color:var(--muted);font-size:.88rem;margin:-30px 0 50px;line-height:1.6}.join{text-align:center;padding:34px 20px;margin:0 0 60px;border:1px solid #a855f744;border-radius:24px;background:radial-gradient(ellipse at top,#4c1d9566,transparent 70%),var(--panel)}
+.join h2{margin:0 0 10px;font-size:clamp(1.6rem,4vw,2.2rem)}.join p{max-width:550px;margin:0 auto 22px;color:var(--muted);line-height:1.7}
+.btn{display:inline-block;padding:13px 19px;border-radius:12px;background:linear-gradient(100deg,#9333ea,#6d28d9);font-weight:850;box-shadow:0 8px 26px #7c3aed33}
+footer{text-align:center;border-top:1px solid var(--line);padding:22px 0 30px;color:#7f8ba1;font-size:.85rem}
+@media(max-width:760px){.team,.shop{grid-template-columns:repeat(2,minmax(0,1fr))}.card,.product{padding:20px}}@media(max-width:520px){header{align-items:flex-start}.brand{font-size:.9rem}nav{gap:12px;font-size:.82rem}.hero{padding:55px 0 35px}.team,.shop{grid-template-columns:1fr}.card,.product{min-height:0}}
+</style></head><body><div class="wrap">
+<header><a class="brand" href="#top"><span class="logo">S</span><span>STAUNCHS</span></a><nav><a href="#shop">Shop</a><a href="#team">Our Team</a><a href="#discord">Discord</a></nav></header>
+<main id="top"><section class="hero"><span class="pill">OFFICIAL COMMUNITY</span><h1>Meet the <span class="grad">Team</span></h1><p>The people behind Staunchs. Meet the leadership and admins helping our community grow, connect, and keep gaming together.</p></section>
+<section id="shop"><div class="heading"><span class="pill">SERVER OPENING SALE</span><h2>STAUNCHS <span class="grad">Shop</span></h2><p>Opening deals are live for a limited time!</p></div>
+<div class="shop">
+<article class="product"><div class="product-icon">🪽</div><span class="sale">50% OFF</span><h3>Aurora Cape</h3><p>Opening discount — grab the Aurora Cape while the deal is live.</p><div><span class="price">$0.50</span><span class="old-price">$1.00</span></div><a class="order" href="https://discord.gg/SEx8gtSVk" target="_blank" rel="noopener noreferrer">Order on Discord ↗</a></article>
+<article class="product"><div class="product-icon">🟥</div><span class="sale">OPENING DEAL</span><h3>Red Block Deal</h3><p>Special launch offer: 4 stacks instead of 8 stacks.</p><div class="price">4 stacks</div><a class="order" href="https://discord.gg/SEx8gtSVk" target="_blank" rel="noopener noreferrer">Order on Discord ↗</a></article>
+<article class="product"><div class="product-icon">🏰</div><span class="sale">SPECIAL ITEM</span><h3>Minecraft Dungeons II Cape</h3><p>Cape from Minecraft Dungeons II.</p><div class="price">$0.10 <span style="font-size:.9rem;color:#a2aec2;font-weight:700">or 1 stack Red Block</span></div><a class="order" href="https://discord.gg/SEx8gtSVk" target="_blank" rel="noopener noreferrer">Order on Discord ↗</a></article>
+</div><p class="shop-note">To order, join our Discord and contact the team. Payments and delivery are arranged manually in Discord.</p></section>
+<section id="team"><div class="heading"><h2>The people behind <span class="grad">Staunchs</span></h2><p>Leadership, vision, and community support.</p></div>
+<div class="team">
+<article class="card owner" style="--glow:#a855f7"><div class="avatar">KH</div><div class="role">♛ Owner</div><h3>K1ngHY</h3><p class="desc">Leading the Staunchs community.</p><div class="tag">Community Owner</div></article>
+<article class="card founder" style="--glow:#22d3ee"><div class="avatar">A7</div><div class="role">✦ Founder</div><h3>A7bkya8be</h3><p class="desc">The founder behind the Staunchs community.</p><div class="tag">Original Founder</div></article>
+<article class="card admin" style="--glow:#64748b"><div class="avatar">AD</div><div class="role">⚙ Admin</div><h3>sssaad</h3><p class="desc">Helping support and manage the community.</p><div class="tag">Administration</div></article>
+<article class="card admin" style="--glow:#64748b"><div class="avatar">LO</div><div class="role">⚙ Admin</div><h3>Loogings</h3><p class="desc">Helping support and manage the community.</p><div class="tag">Administration</div></article>
+<article class="card admin" style="--glow:#64748b"><div class="avatar">OB</div><div class="role">⚙ Admin</div><h3>Obm</h3><p class="desc">Helping support and manage the community.</p><div class="tag">Administration</div></article>
+</div></section>
+<section class="join" id="discord"><h2>Join the <span class="grad">Staunchs</span> community</h2><p>Connect with the team, meet other members, and be part of what comes next.</p><a class="btn" href="https://discord.gg/SEx8gtSVk" target="_blank" rel="noopener noreferrer">Join our Discord ↗</a></section>
+</main><footer>© <span id="year">2026</span> STAUNCHS Community · Made for the community.</footer></div>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script></body></html>

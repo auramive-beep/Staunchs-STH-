@@ -1,17 +1,11 @@
-STAUNCHS WEBSITE
+STAUNCHS website — Team + Shop edition
 
-Files:
-- index.html: complete website (no frameworks or paid services required)
+Includes the team page and an opening-sale shop section.
+Products listed:
+- Aurora Cape: $0.50 (was $1.00)
+- Red Block Deal: 4 stacks instead of 8 stacks
+- Minecraft Dungeons II Cape: $0.10 or 1 stack Red Block
 
-Preview:
-Open index.html in a web browser.
+Orders are routed to the STAUNCHS Discord invite; no online payment processing is configured.
 
-Publish free with GitHub Pages:
-1. Sign in or create a GitHub account.
-2. Create a new public repository, for example: staunchs-site.
-3. Upload index.html to the repository root.
-4. Open repository Settings -> Pages.
-5. Under Build and deployment, select Deploy from a branch, choose main and /(root), then Save.
-6. Wait for GitHub to publish the site. The public URL will be shown in Settings -> Pages.
-
-Discord invite used: https://discord.gg/SEx8gtSVk
+To publish: upload index.html to the root of the GitHub repository and replace the existing file, then commit the change.
